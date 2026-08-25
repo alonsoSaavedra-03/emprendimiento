@@ -1,0 +1,739 @@
+/* ==========================================================================
+   Luna Shop Component CSS Stylesheet - Harmonized Morado, Rosa Suave & Blanco
+   ========================================================================== */
+
+/* Main Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #fbcfe8; /* Soft Rosa Suave border */
+  padding: 1.1rem 0;
+  box-shadow: 0 2px 10px rgba(219, 39, 119, 0.04);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Logo Brand Area */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #fce7f3;
+  border: 1px solid #fbcfe8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #db2777;
+}
+
+.logo-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #7c3aed; /* Morado Brand Logo Title */
+}
+
+/* Navigation Bar - Clean, Minimalist & Spacious in Morado & Rosa */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  color: #4c4465;
+  padding: 0.55rem 0.95rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  color: #db2777;
+  background: #fce7f3;
+}
+
+.nav-item.active {
+  color: #ffffff;
+  background: #7c3aed; /* Active button in Morado */
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.2);
+}
+
+.header-actions {
+  flex-shrink: 0;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.btn-whatsapp:hover {
+  background: #16a34a;
+}
+
+/* Toast Notification */
+.toast-popup {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  padding: 0.9rem 1.3rem;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid #fbcfe8;
+  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.12);
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: #7c3aed; /* Morado Title */
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #4c4465;
+  margin-bottom: 1.75rem;
+  max-width: 480px;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.hero-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #fbcfe8;
+  display: block;
+}
+
+/* Section Headers */
+.section-header {
+  margin-bottom: 1.75rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  color: #1e1b2e;
+}
+
+.section-header p {
+  color: #766d92;
+  font-size: 0.98rem;
+}
+
+.tab-section {
+  padding: 2rem 0 4rem;
+}
+
+/* Brand Info Grid */
+.brand-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  padding: 1.75rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.card-icon-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.card-icon-header h3 {
+  font-size: 1.2rem;
+  color: #7c3aed;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.value-item {
+  padding: 1.4rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.value-item h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+  color: #db2777; /* Rosa Suave Titles for Values */
+}
+
+.value-item p {
+  font-size: 0.88rem;
+  color: #4c4465;
+}
+
+/* Brand Color Presentation - Morado, Blanco, Rosa Suave */
+.color-presentation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.color-card {
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid #fbcfe8;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(219, 39, 119, 0.05);
+}
+
+.color-badge-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.dot-purple { background: #7c3aed; }
+.dot-white { background: #ffffff; border: 2px solid #db2777; }
+.dot-pink { background: #db2777; }
+
+.color-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.color-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1e1b2e;
+}
+
+.color-hex {
+  font-family: monospace;
+  font-size: 0.82rem;
+  background: #fce7f3;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  color: #be185d;
+  font-weight: 700;
+}
+
+.color-meaning {
+  font-size: 0.92rem;
+  color: #4c4465;
+  line-height: 1.55;
+}
+
+.packaging-showcase-card {
+  padding: 1.75rem;
+  background: #ffffff;
+  margin-top: 1.75rem;
+  border: 1px solid #e9d5ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.05);
+}
+
+.packaging-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #7c3aed;
+}
+
+.packaging-info p {
+  color: #4c4465;
+  font-size: 0.95rem;
+}
+
+/* Product Catalog in Morado, Rosa & Blanco */
+.filter-bar {
+  padding: 1rem 1.4rem;
+  margin-bottom: 2rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.category-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pill-btn {
+  background: #fce7f3;
+  border: 1px solid #fbcfe8;
+  color: #be185d;
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill-btn:hover {
+  background: #f3e8ff;
+  color: #6d28d9;
+  border-color: #e9d5ff;
+}
+
+.pill-btn.active {
+  background: #7c3aed;
+  color: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.25);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.product-image-box {
+  position: relative;
+  height: 220px;
+  background: #fcf4f8;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-badge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+}
+
+.product-details {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.product-rating {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #766d92;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #1e1b2e;
+}
+
+.product-desc {
+  font-size: 0.88rem;
+  color: #4c4465;
+  margin-bottom: 1.1rem;
+}
+
+.product-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  border-top: 1px solid #fbcfe8;
+}
+
+.price-current {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #db2777; /* Rosa Suave Price Accent */
+}
+
+.price-original {
+  font-size: 0.85rem;
+  color: #766d92;
+  text-decoration: line-through;
+  margin-left: 0.4rem;
+}
+
+/* Buyer Persona */
+.buyer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.buyer-profile-card {
+  padding: 2rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.buyer-avatar-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.buyer-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fce7f3;
+  border: 2px solid #fbcfe8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #db2777;
+}
+
+.buyer-sub {
+  display: block;
+  font-size: 0.88rem;
+  color: #4c4465;
+}
+
+.buyer-behavior h4 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: #7c3aed;
+}
+
+.buyer-behavior p {
+  color: #4c4465;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.social-channels {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-chip {
+  background: #fce7f3;
+  border: 1px solid #fbcfe8;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #be185d;
+}
+
+.buyer-details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.buyer-detail-box {
+  padding: 1.75rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.buyer-detail-box h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.85rem;
+  color: #7c3aed;
+}
+
+.buyer-detail-box ul {
+  padding-left: 1.1rem;
+  color: #4c4465;
+  font-size: 0.92rem;
+}
+
+.buyer-detail-box li {
+  margin-bottom: 0.45rem;
+}
+
+.highlight-emerald {
+  border-color: #a7f3d0;
+  background: #f0fdf4;
+}
+
+/* Calculator Grid */
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.calc-form-card {
+  padding: 2rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.calc-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  color: #7c3aed;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.kpi-title {
+  font-size: 0.82rem;
+  color: #766d92;
+  margin-bottom: 0.3rem;
+}
+
+.kpi-value {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #7c3aed;
+}
+
+.payback-card {
+  padding: 1.75rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.payback-months {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #db2777;
+  display: block;
+}
+
+/* Story Timeline */
+.story-card {
+  padding: 2.25rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+}
+
+.step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #7c3aed; /* Morado Numbers */
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.25);
+}
+
+.step-content h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+  color: #7c3aed;
+}
+
+.step-content p {
+  color: #4c4465;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 27, 46, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  background: #ffffff;
+  border-color: #fbcfe8;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: #766d92;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.order-summary-box {
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: #f0fdf4;
+  border-color: #a7f3d0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+/* Footer */
+.main-footer {
+  border-top: 1px solid #fbcfe8;
+  background: #ffffff;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: #766d92;
+  margin-top: 0.2rem;
+}
+
+.footer-meta {
+  font-size: 0.85rem;
+  color: #766d92;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-container, .calculator-grid, .buyer-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-links {
+    overflow-x: auto;
+  }
+}

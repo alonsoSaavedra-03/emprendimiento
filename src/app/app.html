@@ -1,0 +1,468 @@
+<!-- Toast Notification -->
+<div *ngIf="toastMessage()" class="toast-popup glass-card">
+  <i class="fa-solid fa-circle-check text-accent-pink"></i>
+  <span>{{ toastMessage() }}</span>
+</div>
+
+<!-- Header / Navigation -->
+<header class="main-header">
+  <div class="container header-container">
+    <div class="logo-area" (click)="activeTab.set('brand')">
+      <div class="logo-icon">
+        <i class="fa-solid fa-moon"></i>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">Luna Shop</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <button class="nav-item" [class.active]="activeTab() === 'brand'" (click)="activeTab.set('brand')">
+        Marca & Visión
+      </button>
+      <button class="nav-item" [class.active]="activeTab() === 'catalog'" (click)="activeTab.set('catalog')">
+        Catálogo
+      </button>
+      <button class="nav-item" [class.active]="activeTab() === 'buyer'" (click)="activeTab.set('buyer')">
+        Buyer Persona
+      </button>
+      <button class="nav-item" [class.active]="activeTab() === 'calculator'" (click)="activeTab.set('calculator')">
+        Simulador ROI
+      </button>
+      <button class="nav-item" [class.active]="activeTab() === 'story'" (click)="activeTab.set('story')">
+        Historia de Éxito
+      </button>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://wa.me/51999999999" target="_blank" class="btn btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Business
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="main-content">
+
+  <!-- TAB 1: MARCA, VISIÓN Y VALORES MINIMALISTA -->
+  <section class="tab-section container" *ngIf="activeTab() === 'brand'">
+    <!-- Hero Banner -->
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Luna Shop
+        </h1>
+        <p class="hero-description">
+          Una experiencia de compra moderna, cómoda y confiable. Productos variados de calidad con atención personalizada y envíos rápidos.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn btn-luna" (click)="activeTab.set('catalog')">
+            Explorar Catálogo
+          </button>
+          <button class="btn btn-outline" (click)="activeTab.set('story')">
+            Conocer la Historia
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="images/luna_banner.jpg" alt="Luna Shop" class="hero-img">
+      </div>
+    </div>
+
+    <!-- Misión, Visión y Diferenciación -->
+    <div class="section-header" style="margin-top: 3.5rem;">
+      <h2>Identidad de Nuestra Marca</h2>
+      <p>Construimos una relación cercana, confiable y responsable con nuestros clientes.</p>
+    </div>
+
+    <div class="brand-info-grid">
+      <div class="glass-card info-card">
+        <div class="card-icon-header">
+          <i class="fa-solid fa-bullseye text-accent-pink"></i>
+          <h3>Misión</h3>
+        </div>
+        <p>Ofrecer productos variados y de buena calidad mediante una tienda online, brindando a los clientes una experiencia de compra sencilla, segura y confiable.</p>
+      </div>
+
+      <div class="glass-card info-card">
+        <div class="card-icon-header">
+          <i class="fa-solid fa-eye text-accent-purple"></i>
+          <h3>Visión</h3>
+        </div>
+        <p>Convertirse en una tienda online reconocida por la variedad de sus productos, la buena atención al cliente y la rapidez de sus entregas a domicilio.</p>
+      </div>
+
+      <div class="glass-card info-card">
+        <div class="card-icon-header">
+          <i class="fa-solid fa-layer-group text-accent-emerald"></i>
+          <h3>Diferenciación</h3>
+        </div>
+        <p>Variedad de productos en un solo lugar, atención personalizada inmediata por WhatsApp/Redes y empaques atractivos con tarjetas de agradecimiento.</p>
+      </div>
+    </div>
+
+    <!-- SECCIÓN DESTACADA: COLORES PRINCIPALES DE LA MARCA -->
+    <div class="section-header" style="margin-top: 3.5rem;">
+      <h2>Colores Principales</h2>
+      <p>La identidad de Luna Shop se fundamenta en tres colores clave:</p>
+    </div>
+
+    <div class="color-presentation-grid">
+      <!-- Morado -->
+      <div class="color-card glass-card">
+        <div class="color-badge-dot dot-purple"></div>
+        <div class="color-title-row">
+          <span class="color-name">Morado</span>
+          <span class="color-hex">#7C3AED</span>
+        </div>
+        <p class="color-meaning">
+          Representa <strong>creatividad y modernidad</strong>. Es el tono principal que transmite nuestra visión innovadora.
+        </p>
+      </div>
+
+      <!-- Blanco -->
+      <div class="color-card glass-card">
+        <div class="color-badge-dot dot-white"></div>
+        <div class="color-title-row">
+          <span class="color-name">Blanco</span>
+          <span class="color-hex">#FFFFFF</span>
+        </div>
+        <p class="color-meaning">
+          Transmite <strong>limpieza y confianza</strong>. Brinda una estructura clara, lectura cómoda y empaques pulcros.
+        </p>
+      </div>
+
+      <!-- Rosa Suave -->
+      <div class="color-card glass-card">
+        <div class="color-badge-dot dot-pink"></div>
+        <div class="color-title-row">
+          <span class="color-name">Rosa Suave</span>
+          <span class="color-hex">#DB2777</span>
+        </div>
+        <p class="color-meaning">
+          Representa <strong>cercanía y juventud</strong>. Conecta de manera dinámica y empática en nuestras redes sociales.
+        </p>
+      </div>
+    </div>
+
+    <!-- PRESENTACIÓN DE EMPAQUE (PACKAGING) EN BLANCO -->
+    <div class="glass-card packaging-showcase-card">
+      <div class="packaging-info">
+        <h3>Empaque & Unboxing</h3>
+        <p>
+          Los productos serán entregados en cajas o bolsas con el logo de Luna Shop. El empaque tendrá una presentación sencilla pero atractiva y podrá incluir una tarjeta de agradecimiento para el cliente.
+        </p>
+      </div>
+    </div>
+
+    <!-- Valores de la Marca -->
+    <div class="section-header" style="margin-top: 3rem;">
+      <h2>Nuestros Valores</h2>
+    </div>
+
+    <div class="values-grid">
+      <div class="glass-card value-item">
+        <h4>Responsabilidad</h4>
+        <p>Cumplir con los pedidos y entregas acordadas.</p>
+      </div>
+      <div class="glass-card value-item">
+        <h4>Calidad</h4>
+        <p>Ofrecer productos en buenas condiciones.</p>
+      </div>
+      <div class="glass-card value-item">
+        <h4>Confianza</h4>
+        <p>Brindar información clara y cumplir con los clientes.</p>
+      </div>
+      <div class="glass-card value-item">
+        <h4>Puntualidad</h4>
+        <p>Entregar los pedidos dentro del tiempo establecido.</p>
+      </div>
+      <div class="glass-card value-item">
+        <h4>Atención</h4>
+        <p>Escuchar y ayudar a los clientes durante el proceso de compra.</p>
+      </div>
+      <div class="glass-card value-item">
+        <h4>Innovación</h4>
+        <p>Utilizar nuevas herramientas digitales para mejorar las ventas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 2: CATÁLOGO DE PRODUCTOS -->
+  <section class="tab-section container" *ngIf="activeTab() === 'catalog'">
+    <div class="section-header">
+      <h2>Catálogo de Productos</h2>
+      <p>Descubre nuestra variedad de artículos tecnológicos, para el hogar, accesorios y novedades.</p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="filter-bar glass-card">
+      <div class="category-pills">
+        <button 
+          *ngFor="let cat of categories" 
+          class="pill-btn"
+          [class.active]="catalogCategory() === cat"
+          (click)="catalogCategory.set(cat)"
+        >
+          {{ cat }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+      <div class="glass-card product-card" *ngFor="let p of filteredProducts()">
+        <div class="product-image-box">
+          <img [src]="p.image" [alt]="p.name" class="product-img">
+          <span class="badge badge-luna product-badge">{{ p.badge }}</span>
+        </div>
+
+        <div class="product-details">
+          <div class="product-meta">
+            <span class="badge badge-purple">{{ p.category }}</span>
+            <div class="product-rating">
+              <span>{{ p.rating }} ({{ p.salesCount }} ventas)</span>
+            </div>
+          </div>
+
+          <h3 class="product-title">{{ p.name }}</h3>
+          <p class="product-desc">{{ p.description }}</p>
+
+          <div class="product-price-row">
+            <div>
+              <span class="price-current">S/. {{ p.price }}</span>
+              <span class="price-original">S/. {{ p.originalPrice }}</span>
+            </div>
+
+            <button class="btn btn-whatsapp" (click)="openOrderModal(p)">
+              <i class="fa-brands fa-whatsapp"></i> Pedir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 3: BUYER PERSONA (VALERIA) -->
+  <section class="tab-section container" *ngIf="activeTab() === 'buyer'">
+    <div class="section-header">
+      <h2>Buyer Persona: Valeria (24 años)</h2>
+      <p>Perfil detallado del cliente ideal de Luna Shop.</p>
+    </div>
+
+    <div class="buyer-grid">
+      <!-- Persona Profile Card -->
+      <div class="glass-card buyer-profile-card">
+        <div class="buyer-avatar-header">
+          <div class="buyer-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h3>Valeria</h3>
+            <span class="buyer-sub">24 años • Estudiante y Trabajadora Part-Time</span>
+          </div>
+        </div>
+
+        <div class="buyer-behavior">
+          <h4>Comportamiento Digital</h4>
+          <p>Utiliza principalmente <strong>TikTok, Instagram y WhatsApp</strong>. Antes de comprar revisa publicaciones, comentarios de clientes, precios y promociones.</p>
+        </div>
+
+        <div class="social-channels">
+          <span class="social-chip">TikTok</span>
+          <span class="social-chip">Instagram</span>
+          <span class="social-chip">WhatsApp</span>
+        </div>
+      </div>
+
+      <!-- Needs & Problems -->
+      <div class="buyer-details-column">
+        <div class="glass-card buyer-detail-box">
+          <h4>Dolores y Problemas de Valeria</h4>
+          <ul>
+            <li>Poco tiempo para acudir a tiendas físicas.</li>
+            <li>Dificultad para encontrar productos variados en un solo sitio.</li>
+            <li>Desconfianza al comprar en páginas o tiendas poco serias.</li>
+            <li>Necesidad de precios accesibles sin descuidar la calidad.</li>
+          </ul>
+        </div>
+
+        <div class="glass-card buyer-detail-box highlight-emerald">
+          <h4>¿Por qué Valeria elige Luna Shop?</h4>
+          <p>Porque encuentra productos variados en un solo lugar, hace sus pedidos cómodamente desde su celular, recibe atención inmediata por WhatsApp y cuenta con entrega segura a domicilio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 4: SIMULADOR FINANCIERO ROI -->
+  <section class="tab-section container" *ngIf="activeTab() === 'calculator'">
+    <div class="section-header">
+      <h2>Simulador Financiero</h2>
+      <p>Proyecta la rentabilidad mensual de tu tienda online ajustando inversión, ventas y costos de envío.</p>
+    </div>
+
+    <div class="calculator-grid">
+      <!-- Controls -->
+      <div class="glass-card calc-form-card">
+        <h3 class="calc-card-title">Parámetros Operativos ($ USD / S/.)</h3>
+
+        <div class="form-group">
+          <label class="form-label">Inversión Inicial ($ USD)</label>
+          <input type="number" class="form-input" [ngModel]="initialInvestment()" (ngModelChange)="initialInvestment.set($event)">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Precio Promedio de Venta por Producto ($)</label>
+          <input type="number" class="form-input" [ngModel]="unitPrice()" (ngModelChange)="unitPrice.set($event)">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Costo de Adquisición a Proveedor ($)</label>
+          <input type="number" class="form-input" [ngModel]="unitCost()" (ngModelChange)="unitCost.set($event)">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Gastos Fijos Mensuales ($)</label>
+          <input type="number" class="form-input" [ngModel]="monthlyOverhead()" (ngModelChange)="monthlyOverhead.set($event)">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Estimación de Pedidos Mensuales</label>
+          <input type="range" class="range-slider" [ngModel]="monthlySalesTarget()" (ngModelChange)="monthlySalesTarget.set($event)" min="10" max="500" step="5">
+          <small class="font-muted">Ventas estimadas: {{ monthlySalesTarget() }} pedidos/mes</small>
+        </div>
+      </div>
+
+      <!-- KPI Results -->
+      <div class="calc-results-area">
+        <div class="kpi-grid">
+          <div class="kpi-card glass-card">
+            <span class="kpi-title">Margen Bruto por Producto</span>
+            <span class="kpi-value">${{ grossMarginPerUnit() | number }}</span>
+          </div>
+
+          <div class="kpi-card glass-card">
+            <span class="kpi-title">Ventas Brutas Mensuales</span>
+            <span class="kpi-value">${{ monthlyRevenue() | number }}</span>
+          </div>
+
+          <div class="kpi-card glass-card highlight-emerald">
+            <span class="kpi-title">Ganancia Neta Mensual</span>
+            <span class="kpi-value">${{ monthlyNetProfit() | number }}</span>
+            <small class="kpi-sub">Margen Neto: {{ profitMarginPct() }}%</small>
+          </div>
+
+          <div class="kpi-card glass-card">
+            <span class="kpi-title">Punto de Equilibrio</span>
+            <span class="kpi-value">{{ breakEvenUnits() }} Envíos</span>
+          </div>
+        </div>
+
+        <div class="glass-card payback-card">
+          <h4>Retorno de Inversión (Payback)</h4>
+          <span class="payback-months">{{ paybackMonths() }} Meses</span>
+          <p class="font-muted" style="margin-top: 0.5rem;">
+            En {{ paybackMonths() }} meses recuperarás la inversión inicial de ${{ initialInvestment() }} USD.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 5: HISTORIA DE ÉXITO -->
+  <section class="tab-section container" *ngIf="activeTab() === 'story'">
+    <div class="section-header">
+      <h2>Historia de Éxito</h2>
+      <p>El camino de perseverancia, adaptación y crecimiento digital de Luna Shop.</p>
+    </div>
+
+    <!-- Story Timeline -->
+    <div class="glass-card story-card">
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>El Comienzo desde Casa</h4>
+            <p>Valeria inició vendiendo algunos productos a amigos y familiares. Al principio realizaba pocas ventas y le costaba conseguir nuevos clientes.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Creación de Luna Shop & Redes Sociales</h4>
+            <p>Creó la marca Luna Shop y comenzó a publicar videos en Instagram, TikTok y Facebook mostrando los productos y ofreciendo ofertas especiales.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Atención Rápida por WhatsApp & Recomendaciones</h4>
+            <p>Al responder rápidamente por WhatsApp Business, los primeros clientes quedaron satisfechos y comenzaron a recomendar la tienda.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Crecimiento y Consolidación</h4>
+            <p>Luna Shop logró pedidos diarios estables, amplió su catálogo de productos y consolidó una marca confiable en el mercado online.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- WHATSAPP ORDER MODAL -->
+<div class="modal-backdrop" *ngIf="selectedProductForOrder()" (click)="closeOrderModal()">
+  <div class="modal-content glass-card" (click)="$event.stopPropagation()" *ngIf="selectedProductForOrder() as product">
+    <div class="modal-header">
+      <h3>Realizar Pedido por WhatsApp</h3>
+      <button class="modal-close-btn" (click)="closeOrderModal()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="modal-body">
+      <div class="order-summary-box glass-card">
+        <strong>Producto: {{ product.name }}</strong>
+        <span class="price-current">Precio: S/. {{ product.price }}</span>
+      </div>
+
+      <div class="form-group" style="margin-top: 1rem;">
+        <label class="form-label">Tu Nombre</label>
+        <input type="text" class="form-input" [(ngModel)]="orderCustomerName">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Dirección de Entrega</label>
+        <input type="text" class="form-input" [(ngModel)]="orderCustomerDistrict">
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-outline" (click)="closeOrderModal()">Cancelar</button>
+      <button class="btn btn-whatsapp" (click)="sendWhatsAppOrder()">
+        <i class="fa-brands fa-whatsapp"></i> Confirmar Pedido
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="container footer-container">
+    <div class="footer-brand">
+      <span class="logo-title">Luna Shop</span>
+    </div>
+
+    <div class="footer-meta">
+      <span>Desarrollado con <strong>Angular 19</strong></span>
+    </div>
+  </div>
+</footer>
